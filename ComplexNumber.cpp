@@ -16,6 +16,12 @@ IntComplex IntComplex::operator-(const IntComplex& sub)const {
 }
 IntComplex IntComplex::operator*(const IntComplex& mul)const {
 	int r1 = (real * mul.real) - (imaginary * mul.imaginary);//product of real minus product of imaginary
-		i1 = (real * mul.imaginary) + (imaginary * mul.real);// basically (r1*i2) + (i1*r1)
-		return IntComplex(r1, i1);
-}	
+	int	i1 = (real * mul.imaginary) + (imaginary * mul.real);// basically (r1*i2) + (i1*r1)
+	return IntComplex(r1, i1);
+}
+IntComplex IntComplex::operator/(const IntComplex& div)const {
+	int denominator = (div.real * div.real) + (div.imaginary * div.imaginary); //r2 square + i2 square 
+	int r1 = ((real * div.real) + (imaginary * div.imaginary)) / denominator;  //r1 square + i1 square /denominator
+	int i1 = ((imaginary * div.real) - (real * div.imaginary)) / denominator;  //((i1*r2)-(r1*i2)) /denominator
+	return IntComplex(r1, i1);
+}
