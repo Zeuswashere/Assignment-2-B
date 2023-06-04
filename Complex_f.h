@@ -1,20 +1,21 @@
 #pragma once
-#define INTCOMPLEX_H
+#define FLOCOMPLEX_h
 #include <iostream>
+#include "Complex.h"
 using namespace std;
 
-class IntComplex {
+class FloComplex : public IntComplex{ //inherits IntComplex
 private:
-	int real;
-	int imaginary;
+	float real;
+	float imaginary;
 public:
-	IntComplex(int real = 0, int imaginary = 0) : real(real), imaginary(imaginary) {}
+	FloComplex(float real = 0.0f, int imaginary = 0.0f);
 	//getter functions
-	int getReal()const;
-	int getImaginary()const;
+	float getReal()const;
+	float getImaginary()const;
 	//operator overloading
-	IntComplex operator+(const IntComplex& add) const;
-	IntComplex operator-(const IntComplex& sub)const;
-	IntComplex operator*(const IntComplex& mul)const;
-	IntComplex operator/(const IntComplex& div)const;
+	FloComplex operator+(const FloComplex& add) const;
+	FloComplex operator-(const FloComplex& sub)const;
+	FloComplex operator*(const FloComplex& mul)const;
+	FloComplex operator/(const FloComplex& div)const;
 };
