@@ -9,3 +9,7 @@ IntComplex IntComplex::operator+(const IntComplex& add)const {
 	int i1 = imaginary + add.imaginary;
 	return IntComplex(r1, i1);
 }
+IntComplex IntComplex::operator-(const IntComplex& sub)const {
+	int r1 = real - sub.real;
+	int i1 = imaginary - sub.imaginary;
+}
