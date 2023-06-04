@@ -3,18 +3,18 @@
 #include <iostream>
 using namespace std;
 
-class FloComplex {
+class IntComplex {
 private:
 	int real;
 	int imaginary;
 public:
-	FloComplex(int real = 0, int imaginary = 0) : real(real), imaginary(imaginary) {}
+	IntComplex(int real = 0, int imaginary = 0) : real(real), imaginary(imaginary) {}
 	//getter functions
 	int getReal()const;
 	int getImaginary()const;
 	//operator overloading
-	FloComplex operator+(const FloComplex& add) const;
-	FloComplex operator-(const FloComplex& sub)const;
-	FloComplex operator*(const FloComplex& mul)const;
-	FloComplex operator/(const FloComplex& div)const;
+	IntComplex operator+(const IntComplex& add) const;
+	IntComplex operator-(const IntComplex& sub)const;
+	IntComplex operator*(const IntComplex& mul)const;
+	IntComplex operator/(const IntComplex& div)const;
 };
