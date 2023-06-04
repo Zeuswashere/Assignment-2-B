@@ -1,4 +1,3 @@
-
 #pragma once
 #define FLOCOMPLEX_h
 #include <iostream>
