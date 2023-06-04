@@ -25,3 +25,9 @@ IntComplex IntComplex::operator/(const IntComplex& div)const {
 	int i1 = ((imaginary * div.real) - (real * div.imaginary)) / denominator;  //((i1*r2)-(r1*i2)) /denominator
 	return IntComplex(r1, i1);
 }
+int IntComplex::getReal()const {
+	return real;
+}
+int IntComplex::getImaginary()const {
+	return imaginary;
+}
