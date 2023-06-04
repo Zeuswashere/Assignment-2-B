@@ -1,3 +1,4 @@
+
 #pragma once
 #define FLOCOMPLEX_h
 #include <iostream>
@@ -18,4 +19,3 @@ public:
 	FloComplex operator-(const FloComplex& sub)const;
 	FloComplex operator*(const FloComplex& mul)const;
 	FloComplex operator/(const FloComplex& div)const;
-};
