@@ -4,7 +4,7 @@
 #include "Complex.h"
 using namespace std;
 
-class FloComplex : public IntComplex{ //inherits IntComplex
+class FloComplex : public IntComplex { //inherits IntComplex
 private:
 	float real;
 	float imaginary;
@@ -18,3 +18,5 @@ public:
 	FloComplex operator-(const FloComplex& sub)const;
 	FloComplex operator*(const FloComplex& mul)const;
 	FloComplex operator/(const FloComplex& div)const;
+};
+#endif
